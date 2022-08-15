@@ -20,22 +20,22 @@ import { slow, limiter } from "../utils/limit-options";
 
 function scrapeRoutes() {
   const router = Router();
-  router.get("/hentaifox/search", cors(), slow, limiter, searchHentaifox);
-  router.get("/hentaifox/get", cors(), slow, limiter, getHentaifox);
-  router.get("/hentaifox/random", cors(), slow, limiter, randomHentaifox);
-  router.get("/pururin/get", cors(), slow, limiter, getPururin);
-  router.get("/pururin/search", cors(), slow, limiter, searchPururin);
-  router.get("/pururin/random", cors(), slow, limiter, randomPururin);
-  router.get("/hentai2read/search", cors(), slow, limiter, searchHentai2read);
-  router.get("/hentai2read/get", cors(), slow, limiter, getHentai2read);
-  router.get("/simply-hentai/get", cors(), slow, limiter, getSimplyhentai);
-  router.get("/asmhentai/get", cors(), slow, limiter, getAsmhentai);
-  router.get("/asmhentai/search", cors(), slow, limiter, searchAsmhentai);
-  router.get("/asmhentai/random", cors(), slow, limiter, randomAsmhentai);
-  router.get("/nhentai/get", cors(), slow, limiter, getNhentai);
-  router.get("/nhentai/search", cors(), slow, limiter, searchNhentai);
-  router.get("/nhentai/related", cors(), slow, limiter, relatedNhentai);
-  router.get("/nhentai/random", cors(), slow, limiter, randomNhentai);
+  router.get("/hentaifox/search", cors(), searchHentaifox);
+  router.get("/hentaifox/get", cors(), getHentaifox);
+  router.get("/hentaifox/random", cors(), randomHentaifox);
+  router.get("/pururin/get", cors(), getPururin);
+  router.get("/pururin/search", cors(), searchPururin);
+  router.get("/pururin/random", cors(), randomPururin);
+  router.get("/hentai2read/search", cors(), searchHentai2read);
+  router.get("/hentai2read/get", cors(), getHentai2read);
+  router.get("/simply-hentai/get", cors(), getSimplyhentai);
+  router.get("/asmhentai/get", cors(), getAsmhentai);
+  router.get("/asmhentai/search", cors(), searchAsmhentai);
+  router.get("/asmhentai/random", cors(), randomAsmhentai);
+  router.get("/nhentai/get", cors(), getNhentai);
+  router.get("/nhentai/search", cors(), searchNhentai);
+  router.get("/nhentai/related", cors(), relatedNhentai);
+  router.get("/nhentai/random", cors(), randomNhentai);
 
   return router;
 }
